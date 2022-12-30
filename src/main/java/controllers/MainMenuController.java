@@ -48,8 +48,6 @@ public class MainMenuController extends Controller {
     private VBox accountRowContainer;
     @FXML
     private MFXScrollPane accountScroll;
-    @FXML
-    private ProgressIndicator progressIndicator;
 
     private Connection con = null;
     PreparedStatement preparedStatement = null;
@@ -150,48 +148,47 @@ public class MainMenuController extends Controller {
                 }
             }
         }
-        }
+    }
 
-        public void addAccountRow(String battleTag,String email){
-            progressIndicator.setVisible(true);
-            MainMenuController me = this;
-            Task<HBox> task = new Task<HBox>() {
-                @Override
-                protected HBox call() throws Exception {
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/FXML/AccountRow.fxml"));
-                        HBox accountRow = null;
-                        try {
-                            accountRow = loader.load();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        AccountRowController sc = loader.getController();
-                        sc.setMain(main);
-                        sc.setConnection(con);
-                        sc.setAccount(battleTag);
-                        sc.setEmail(email);
-                        sc.setParent(me);
-                        sc.fill();
-                        return accountRow;
+    public void addAccountRow(String battleTag,String email){
+//            progressIndicator.setVisible(true);
+        MainMenuController me = this;
+        Task<HBox> task = new Task<HBox>() {
+            @Override
+            protected HBox call() throws Exception {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/FXML/AccountRow.fxml"));
+                HBox accountRow = null;
+                try {
+                    accountRow = loader.load();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-            };
-            progressIndicator.progressProperty().bind(task.progressProperty());
-            task.setOnSucceeded(evt -> {
-                if(threadCount<expectedThreadCount-1){
-                    rows.add(task.getValue());
-                    threadCount++;
-                }else{
-                    rows.add(task.getValue());
-                    HBoxComparator comparator = new HBoxComparator();
-                    rows.sort(comparator);
-                    accountRowContainer.getChildren().clear();
-                    accountRowContainer.getChildren().setAll(rows);
-                    loadingAccounts=false;
-                    progressIndicator.setVisible(false);
-                }
-            });
-            new Thread(task).start();
-        }
+                AccountRowController sc = loader.getController();
+                sc.setMain(main);
+                sc.setConnection(con);
+                sc.setAccount(battleTag);
+                sc.setEmail(email);
+                sc.setParent(me);
+                sc.fill();
+                return accountRow;
+            }
+        };
+//            progressIndicator.progressProperty().bind(task.progressProperty());
+        task.setOnSucceeded(evt -> {
+            if(threadCount<expectedThreadCount-1){
+                rows.add(task.getValue());
+                threadCount++;
+            }else{
+                rows.add(task.getValue());
+                HBoxComparator comparator = new HBoxComparator();
+                rows.sort(comparator);
+                accountRowContainer.getChildren().clear();
+                accountRowContainer.getChildren().setAll(rows);
+                loadingAccounts=false;
+            }
+        });
+        new Thread(task).start();
+    }
 }
 
 class HBoxComparator implements Comparator<HBox> {
