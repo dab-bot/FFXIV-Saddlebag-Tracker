@@ -35,8 +35,6 @@ public class Main extends Application {
 		Parent root = loader.load();
 		c = loader.getController();
 		c.setMain(this);
-		con = DBConnector.conDB();
-		c.setConnection(con);
 		primaryStage.setTitle("Overwatch Account Tracker");
 		bs = new BorderlessScene(primaryStage, StageStyle.UNDECORATED,root);
 		bs.removeDefaultCSS();

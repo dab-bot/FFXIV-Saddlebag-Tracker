@@ -1,8 +1,81 @@
 .mfx-button{
-    -fx-background-color: #283046;
+    -fx-background-color: #242b3d;
     -fx-text-fill: #d0d2d6;
+    -fx-border-color: #3b4253;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
 }
 
 .mfx-button SVGPath{
     -fx-fill: #d0d2d6;
+}
+
+.label{
+    -fx-text-fill: #d0d2d6;
+}
+
+.quickSearchBox{
+    -fx-background-color: #283046;
+    -fx-background-radius: 10;
+}
+
+.inputFieldsArea{
+    -fx-background-color: #283046;
+    -fx-background-radius: 10;
+}
+
+.mfx-text-field{
+    -fx-text-fill: #b5b7bc;
+    -fx-background-color: #283046;
+    -fx-border-color: #b5b7bc;
+}
+
+.mfx-text-field .floating-text{
+    -fx-text-fill: #b5b7bc;
+    -fx-background-color: #283046;
+}
+
+.mfx-text-field:hover{
+    -fx-border-color: #b5b7bc;
+    -fx-text-fill: #b5b7bc;
+}
+
+.mfx-text-field:focus-within {
+    -fx-border-color: #0F60FF;
+}
+.mfx-text-field:focus-within  .floating-text{
+    -fx-text-fill: #0F60FF;
+    -fx-background-color: #283046;
+}
+
+.mfx-text-field .measure-unit {
+    -fx-text-fill: #b5b7bc;
+}
+
+.mfx-text-field .measure-unit {
+    -fx-text-fill: #b5b7bc;
+}
+
+.mfx-check-list-view .virtual-flow{
+    -fx-background-color: #242b3d;
+    -fx-border-color: #3b4253;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.mfx-check-list-view .virtual-flow .mfx-check-list-cell{
+    -fx-background-color: TRANSPARENT;
+    -fx-border-color: TRANSPARENT;
+}
+
+.mfx-check-list-view .virtual-flow .mfx-check-list-cell .mfx-checkbox{
+    -mfx-main: #0F60FF;
+}
+
+.mfx-checkbox:selected{
+    -mfx-main: #0F60FF;
+}
+
+.mfx-checkbox{
+    -fx-text-fill: #b5b7bc;
 }
