@@ -25,8 +25,6 @@ public class SearchHandler {
             filters += f.getFilterValue();
             filters += ",";
         }
-        StringUtils.chop(filters);
-
         Map<String, String> headers = new HashMap<>();
         headers.put("cookie", cookieValue);
 
@@ -37,7 +35,7 @@ public class SearchHandler {
         fields.put("minimum_stack_size", minStackSize);
         fields.put("minimum_profit_amount", minProfitAmount);
         fields.put("price_per_unit", avgPricePerUnit);
-        fields.put("filters", filters);
+        fields.put("filters", StringUtils.chop(filters));
         if(enableHQ)
             fields.put("hq_only", "on");
         if(regionWide)

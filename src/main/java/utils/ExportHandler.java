@@ -26,7 +26,7 @@ public class ExportHandler {
         File file = fileChooser.showSaveDialog(main.getStg());
         if (file != null) {
             try (PrintWriter pw = new PrintWriter(file)) {
-                pw.println("Item Name,Item Data,Universalis Link,NPC Vendor Info,Lowest Price Server,Home Server Price,Lowest Price Per Unit,Profit Amount,Sale Rates,Average Price Per Unit,Return on Investment,Profit Percentage,Lowest Price Last Update Time,Home Server Info Last Updated At");
+                pw.println("Item Name,Item Data,Universalis Link,NPC Vendor Info,Lowest Price Server,Home Server Price,Lowest Price Per Unit,Profit Amount,Sale Rates,Average Price Per Unit,Return on Investment,Profit Percentage,Lowest Price Stack Size,Lowest Price Last Update Time,Home Server Info Last Updated At");
 
                 for(GameItem g: items){
                     pw.print(g.getReal_name()+",");
@@ -42,8 +42,8 @@ public class ExportHandler {
                     pw.print(g.getRoi()+",");
                     pw.print(g.getProfit_raw_percent()+",");
                     pw.print(g.getStack_size()+",");
-                    pw.print(g.getUpdateTime()+",");
-                    pw.println(g.getHome_update_time());
+                    pw.print(g.getUpdateTimeString()+",");
+                    pw.println(g.getHome_update_timeString());
                 }
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Export Success");

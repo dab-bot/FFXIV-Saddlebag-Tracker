@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="OverwatchAccountViewer" />
+        <module name="SaddlebagTracker" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="OverwatchAccountViewer" target="17" />
+      <module name="SaddlebagTracker" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

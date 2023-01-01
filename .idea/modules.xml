@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OverwatchAccountViewer.iml" filepath="$PROJECT_DIR$/OverwatchAccountViewer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SaddlebagTracker.iml" filepath="$PROJECT_DIR$/SaddlebagTracker.iml" />
     </modules>
   </component>
 </project>

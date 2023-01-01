@@ -1,6 +1,9 @@
 package Models;
 
 import org.json.JSONObject;
+import org.ocpsoft.prettytime.PrettyTime;
+
+import java.util.Date;
 
 public class GameItem {
     private double roi;
@@ -83,6 +86,12 @@ public class GameItem {
         return home_update_time;
     }
 
+    public String getHome_update_timeString(){
+        Date d = new Date(Long.parseLong(home_update_time));
+        PrettyTime p = new PrettyTime();
+        return p.format(d);
+    }
+
     public void setHome_update_time(String home_update_time) {
         this.home_update_time = home_update_time;
     }
@@ -161,6 +170,12 @@ public class GameItem {
 
     public String getUpdateTime() {
         return updateTime;
+    }
+
+    public String getUpdateTimeString(){
+        Date d = new Date(Long.parseLong(updateTime));
+        PrettyTime p = new PrettyTime();
+        return p.format(d);
     }
 
     public void setUpdateTime(String updateTime) {

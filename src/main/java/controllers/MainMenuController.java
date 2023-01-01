@@ -112,8 +112,8 @@ public class MainMenuController extends Controller {
         roiCol.setRowCellFactory(gameItem -> new MFXTableRowCell<>(GameItem::getRoi));
         profitPercentageCol.setRowCellFactory(gameItem -> new MFXTableRowCell<>(GameItem::getProfit_raw_percent));
         lowestPriceStackPrize.setRowCellFactory(gameItem -> new MFXTableRowCell<>(GameItem::getStack_size));
-        lowestPriceLastUpdateTimeCol.setRowCellFactory(gameItem -> new MFXTableRowCell<>(GameItem::getUpdateTime));
-        homeServerInfoLastUpdatedAtCol.setRowCellFactory(gameItem -> new MFXTableRowCell<>(GameItem::getHome_update_time));
+        lowestPriceLastUpdateTimeCol.setRowCellFactory(gameItem -> new MFXTableRowCell<>(GameItem::getUpdateTimeString));
+        homeServerInfoLastUpdatedAtCol.setRowCellFactory(gameItem -> new MFXTableRowCell<>(GameItem::getHome_update_timeString));
         itemNameCol.setPrefWidth(250);
 
         resultsTable.getTableColumns().add(itemNameCol);

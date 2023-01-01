@@ -27,7 +27,7 @@ public class Main extends Application {
 		Parent root = loader.load();
 		c = loader.getController();
 		c.setMain(this);
-		primaryStage.setTitle("Overwatch Account Tracker");
+		primaryStage.setTitle("Saddlebag Tracker");
 		bs = new BorderlessScene(primaryStage, StageStyle.UNDECORATED,root);
 		bs.removeDefaultCSS();
 		primaryStage.setScene(bs);
