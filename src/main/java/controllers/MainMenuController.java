@@ -138,6 +138,7 @@ public class MainMenuController extends Controller {
     public void setupServerLocations() {
         locationPicker.getItems().add(new ServerLocation("Aether - Cactuar", "__session=eyJkYXRhX2NlbnRlciI6IkFldGhlciIsIndvcmxkIjoiQ2FjdHVhciJ9"));
         locationPicker.getItems().add(new ServerLocation("Dynamis - Halicarnassus", "__session=eyJkYXRhX2NlbnRlciI6IkR5bmFtaXMiLCJ3b3JsZCI6IkhhbGljYXJuYXNzdXMifQ%3D%3D"));
+        locationPicker.getItems().add(new ServerLocation("Dynamis - Seraph", "__session=eyJkYXRhX2NlbnRlciI6IkR5bmFtaXMiLCJ3b3JsZCI6IlNlcmFwaCJ9"));
     }
 
     public void setupQuickSearch() {
