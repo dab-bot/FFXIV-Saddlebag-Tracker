@@ -225,20 +225,19 @@
             </VBox>
             <VBox maxWidth="1.7976931348623157E308" styleClass="inputFieldsArea">
                <children>
-                  <MFXScrollPane fx:id="accountScroll1" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="330.0" minHeight="330.0" style="-fx-background-color: TRANSPARENT;" VBox.vgrow="ALWAYS">
+                  <MFXScrollPane fx:id="accountScroll1" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" maxHeight="265.0" minHeight="265.0" style="-fx-background-color: TRANSPARENT;" VBox.vgrow="ALWAYS">
                      <content>
-                        <GridPane alignment="TOP_CENTER" hgap="20.0" maxHeight="1.7976931348623157E308" prefHeight="328.0">
+                        <GridPane alignment="TOP_CENTER" hgap="20.0" maxHeight="1.7976931348623157E308" prefHeight="265.0">
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                            </columnConstraints>
                            <rowConstraints>
-                              <RowConstraints maxHeight="78.80001449584961" minHeight="10.0" percentHeight="20.0" prefHeight="65.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="65.0" minHeight="10.0" percentHeight="20.0" prefHeight="65.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="65.0" minHeight="65.0" percentHeight="20.0" prefHeight="65.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="168.99996185302734" minHeight="10.0" percentHeight="20.0" prefHeight="76.00002441406252" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="168.99996185302734" minHeight="10.0" percentHeight="20.0" prefHeight="76.00002441406252" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="78.80001449584961" minHeight="10.0" percentHeight="25.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="65.0" minHeight="10.0" percentHeight="25.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="65.0" minHeight="65.0" percentHeight="25.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="168.99996185302734" minHeight="10.0" percentHeight="25.0" prefHeight="76.00002441406252" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <padding>
                               <Insets left="20.0" right="20.0" />
@@ -259,7 +258,6 @@
                               <MFXCheckbox fx:id="regionWideSearchCheck" text="Region Wide Search" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                               <MFXCheckbox fx:id="includeVendorCheck" text="Include Vendor Prices" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                               <MFXCheckbox fx:id="includeOOSCheck" text="Include Out of Stock" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                              <MFXTextField fx:id="apiEndpointField" floatMode="BORDER" floatingText="API Endpoint" maxWidth="1.7976931348623157E308" GridPane.columnSpan="3" GridPane.rowIndex="4" />
                            </children>
                         </GridPane>
                      </content>

@@ -196,7 +196,6 @@ public class MainMenuController extends Controller {
         regionWideSearchCheck.setSelected(regionWide);
         includeVendorCheck.setSelected(includeVendor);
         includeOOSCheck.setSelected(includeOOS);
-        apiEndpointField.setText(apiEndpoint);
     }
 
     public void fillItemFilterList() {
@@ -300,7 +299,7 @@ public class MainMenuController extends Controller {
         boolean regionWide = regionWideSearchCheck.isSelected();
         boolean includeVendor = includeVendorCheck.isSelected();
         boolean includeOOS = includeOOSCheck.isSelected();
-        String apiEndpoint = apiEndpointField.getText();
+        String apiEndpoint = "";//apiEndpointField.getText();
         String cookieValue = locationPicker.getValue().getCookieValue();
         progressIndicator.setVisible(true);
         resultsLabel.setVisible(false);

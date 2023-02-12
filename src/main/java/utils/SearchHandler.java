@@ -46,7 +46,7 @@ public class SearchHandler {
             fields.put("out_of_stock", "on");
 
         HttpResponse<JsonNode> response;
-        response = Unirest.post(apiEndpoint)
+        response = Unirest.post("https://saddlebagexchange.com/queries/full-scan?index=&_data=routes%2Fqueries%2Ffull-scan%2Findex")//replaced apiEndpoint variable
                 .headers(headers)
                 .fields(fields)
                 .asJson();
